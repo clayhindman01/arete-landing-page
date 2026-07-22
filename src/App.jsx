@@ -16,6 +16,11 @@ export default function App() {
     setSubmitted(true);
   }
 
+  //scroll to top on cta click
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth", duration: 500 });
+  }
+
   return (
     <div className="page">
       <header className="nav">
@@ -107,7 +112,10 @@ export default function App() {
             Ready to start becoming your best self?
           </h2>
 
-          <button>
+          <button onClick={() => {
+            scrollToTop();
+            document.querySelector(".signup input").focus();
+          }}>
             Join the Waitlist
           </button>
         </section>
