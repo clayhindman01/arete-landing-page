@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import { addToWaitlist } from "./util/supabase";
 
 export default function App() {
   const [email, setEmail] = useState("");
@@ -9,6 +10,7 @@ export default function App() {
     e.preventDefault();
 
     // Replace this with Supabase / Mailchimp / ConvertKit later
+    addToWaitlist(email);
     console.log(email);
 
     setSubmitted(true);
