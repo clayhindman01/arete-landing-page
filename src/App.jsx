@@ -57,7 +57,7 @@ export default function App() {
                 />
 
                 <button type="submit">
-                  Get Early Access
+                  Join the Waitlist
                 </button>
               </>
             )}
