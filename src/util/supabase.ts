@@ -10,6 +10,7 @@ const supabase = supabaseUrl && supabaseKey
 console.log("Supabase URL:", supabaseUrl);
 console.log("Supabase Key:", supabaseKey);
 
+
 // function to insert the email into the waitlist table
 export async function addToWaitlist(email: string) {
     if (!supabase) {
