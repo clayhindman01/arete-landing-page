@@ -7,6 +7,9 @@ const supabase = supabaseUrl && supabaseKey
   ? createClient(supabaseUrl, supabaseKey)
   : null;
 
+console.log("Supabase URL:", supabaseUrl);
+console.log("Supabase Key:", supabaseKey);
+
 // function to insert the email into the waitlist table
 export async function addToWaitlist(email: string) {
     if (!supabase) {
@@ -22,6 +25,5 @@ export async function addToWaitlist(email: string) {
         console.error('Error adding to waitlist:', error);
         throw error;
     }
-    console.log('Successfully added to waitlist:', data);
     return data;
 }
